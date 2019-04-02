@@ -11,9 +11,9 @@ class ClickBox
     this.set_coordinates(x1, y1, x2, y2);
   }
 
-  draw()
+  draw(canvas_context)
   {
-    return 1;
+
   }
 
   set_coordinates(x1, y1, x2, y2)
@@ -32,6 +32,16 @@ class ClickBox
       x2 : this.x2,
       y2 : this.y2
     };
+  }
+
+  get_x()
+  {
+
+  }
+
+  get_y()
+  {
+    
   }
 
   set_x1(x1)

@@ -43,7 +43,7 @@ class GameApp
       let total_clickboxes = this.get_total_clickboxes();
       for(let i = 0; i < total_clickboxes; i++)
       {
-          this.get_clickbox(i).draw();
+          this.get_clickbox(i).draw(canvas_context);
       }
     }
 
