@@ -1,20 +1,27 @@
 
-function isHTMLNode(node_object)
+function andmap(predicate, array)
 {
-  let isNode = false;
-  if(node_object instanceof Node)
+  let result = true;
+  for(let i = 0; i < array.length; i++)
   {
-    isNode = true;
+    if(!predicate(array[i]))
+    {
+      result = false;
+      break;
+    }
   }
-  return isNode;
+  return result;
 }
 
-function isjQueryObject($jQuery_object)
+function indexes_of(array, value)
 {
-  let isjQuery = false;
-  if($jQuery_object instanceof jQuery)
+  let array_of_indexes = [];
+  for(let i = 0; i < array.length; i++)
   {
-    isjQuery = true;
+    if(array[i] == value)
+    {
+      array_of_indexes.push(i);
+    }
   }
-  return isjQuery;
+  return array_of_indexes;
 }

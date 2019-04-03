@@ -61,4 +61,24 @@ class Board
   {
     return this.total_clickboxes;
   }
+
+  set_clickbox_occupancy(index, occupancy_status)
+  {
+    this.get_clickbox(index).set_occupancy(occupancy_status);
+  }
+
+  get_clickbox_occupancy(index)
+  {
+    return this.get_clickbox(index).get_occupancy();
+  }
+
+  to_char()
+  {
+    let character_array = [];
+    for(let i = 0; i < this.get_total_clickboxes(); i++)
+    {
+      character_array.push(this.get_clickbox(i).get_occupancy());
+    }
+    return character_array;
+  }
 }
